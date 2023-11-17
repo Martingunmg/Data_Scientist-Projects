@@ -1,0 +1,49 @@
+xmagun28@DESKTOP-M6G88K7 MINGW64 /c/Pythona
+$ python -m venv env
+
+xmagun28@DESKTOP-M6G88K7 MINGW64 /c/Pythona
+$ source env/Scripts/activate
+(env) 
+
+xmagun28@DESKTOP-M6G88K7 MINGW64 /c/Pythona
+$ pip install fastapi
+
+xmagun28@DESKTOP-M6G88K7 MINGW64 /c/Pythona
+$ touch main.py
+
+xmagun28@DESKTOP-M6G88K7 MINGW64 /c/Pythona
+$ pip install uvicorn
+
+xmagun28@DESKTOP-M6G88K7 MINGW64 /c/Pythona
+$ uvicorn main:app --reload
+INFO:     Will watch for changes in these directories: ['C:\\Pythona']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [5652] using StatReload
+INFO:     Started server process [10812]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+
+xmagun28@DESKTOP-M6G88K7 MINGW64 /c/Pythona
+$ pip install sqlalchemy
+
+xmagun28@DESKTOP-M6G88K7 MINGW64 /c/Pythona
+$ touch database.py
+
+xmagun28@DESKTOP-M6G88K7 MINGW64 /c/Pythona
+$ pip install psycopg2-binary
+
+xmagun28@DESKTOP-M6G88K7 MINGW64 /c/Pythona
+$ touch models.py
+(env) 
+
+xmagun28@DESKTOP-M6G88K7 MINGW64 /c/Pythona
+$ python create_db.py
+Creating database ...
+
+CREATE TABLE programme (
+        id SERIAL NOT NULL,
+        name VARCHAR(80) NOT NULL,
+        description TEXT,
+        PRIMARY KEY (id),
+        UNIQUE (name)
+)
